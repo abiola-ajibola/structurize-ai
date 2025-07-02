@@ -4,7 +4,7 @@ An AI embedded tool that can accept unstructured data such as a file or raw text
 
 # Flow
 
-1. Accept a file from an input or enter in a textarea.
+1. Accept a file containing unstructured data from a file input or enter in a textarea.
 2. Accept another file which represents the schema (CSV with headings) or enter the comma separated headings in a textarea.
 3. Submit with a button.
 4. Use prompt engineering to extract the structured data in CSV format, based on the input schema.
