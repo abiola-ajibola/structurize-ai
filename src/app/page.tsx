@@ -44,11 +44,15 @@ export default function Home() {
           method="POST"
           className="flex flex-col gap-4 p-8 rounded-xl w-3xl max-w-3xl"
         >
-          <h1 className="mb-12 text-center font-medium text-3xl">
-            Structurize
+          <h1 className="mb-8 text-center font-medium text-3xl">
+            Structurize AI
           </h1>
           <fieldset>
             <legend className="mb-6 font-bold">Unstructured Data input</legend>
+            <p className="text-xs mb-4 text-gray-500">
+              Upload a text file containing your unstructured data, or type it in the
+              textbox below.
+            </p>
             <Input className="mb-4" name="input" type="file" accept="text/*" />
             <div className="my-4 text-center">OR</div>
             <Textarea className="mb-4" name="input_text" />
@@ -63,7 +67,7 @@ export default function Home() {
       </div>
 
       {data.length > 0 && (
-        <>
+        <div className="px-6">
           <h2 className="text-center text-2xl mb-6">Preview</h2>
           <div className="text-right">
             <Link
@@ -110,7 +114,7 @@ export default function Home() {
               </p>
             )}
           </div>
-        </>
+        </div>
       )}
     </>
   );
