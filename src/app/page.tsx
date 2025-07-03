@@ -44,23 +44,24 @@ export default function Home() {
           method="POST"
           className="flex flex-col gap-4 p-8 rounded-xl w-3xl max-w-3xl"
         >
-          <h1 className="mb-8 text-center font-medium text-3xl">
+          <h1 className="text-center font-medium text-3xl">
             Structurize AI
           </h1>
-          <fieldset>
-            <legend className="mb-6 font-bold">Unstructured Data input</legend>
+          <h2 className="text-center text-lg mb-6">Generate a structured CSV file from unstructured text data</h2>
+          <fieldset className="mb-6">
+            <legend className="mb-2 font-bold">Unstructured Data input</legend>
             <p className="text-xs mb-4 text-gray-500">
               Upload a text file containing your unstructured data, or type it in the
               textbox below.
             </p>
             <Input className="mb-4" name="input" type="file" accept="text/*" />
             <div className="my-4 text-center">OR</div>
-            <Textarea className="mb-4" name="input_text" />
+            <Textarea name="input_text" />
           </fieldset>
           <fieldset>
-            <legend className="mb-6 font-bold">CSV Headers</legend>
+            <legend className="mb-2 font-bold">CSV Headers</legend>
             <p className="text-xs mb-4 text-gray-500">Type in the headers you want your CSV output to have. One per line.</p>
-            <Textarea className="mb-4" name="schema_text" />
+            <Textarea name="schema_text" />
           </fieldset>
           <Button type="submit">Submit</Button>
         </form>
