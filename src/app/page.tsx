@@ -54,9 +54,8 @@ export default function Home() {
             <Textarea className="mb-4" name="input_text" />
           </fieldset>
           <fieldset>
-            <legend className="mb-6 font-bold">Schema</legend>
-            <Input className="mb-4" name="schema" type="file" accept="text/*" />
-            <div className="my-4 text-center">OR</div>
+            <legend className="mb-6 font-bold">CSV Headers</legend>
+            <p className="text-xs mb-4 text-gray-500">Type in the headers you want your CSV output to have. One per line.</p>
             <Textarea className="mb-4" name="schema_text" />
           </fieldset>
           <Button type="submit">Submit</Button>

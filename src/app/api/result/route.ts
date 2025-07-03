@@ -7,7 +7,7 @@ import { NextRequest } from "next/server";
 type FormDataShape = {
   input: File;
   input_text: string;
-  schema: File;
+  schema?: File;
   schema_text: string;
 };
 
@@ -17,7 +17,9 @@ export async function POST(request: NextRequest) {
   const input =
     fd.input.size > 0 ? await readFileAsText(fd.input) : fd.input_text;
   const schema =
-    fd.schema.size > 0 ? await readFileAsText(fd.schema) : fd.schema_text;
+    !!fd.schema && fd.schema.size > 0
+      ? await readFileAsText(fd.schema)
+      : fd.schema_text;
 
   const response = await ai.models.generateContent({
     model: "gemini-2.5-flash",
